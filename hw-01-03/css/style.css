@@ -6,8 +6,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/*default for all body*/
 body {
   font-family: "Playfair Display", "Arial", serif;
+  font-weight: 400;
   color: #626262;
   font-size: 14px;
   line-height: 24px; /*высота строки с учетом отступов*/
@@ -17,4 +19,86 @@ img {
   display: block;
   max-width: 100%; /*чтобы картинка не растягивалась больше оригинального размера*/
   height: auto;
+}
+.conteiner {
+  width: 900px;
+  margin: 0 auto;
+}
+.page-header {
+  margin-bottom: 68px;
+}
+.page-nav {
+  padding: 30px;
+}
+
+.site-navigation {
+  display: inline-block;
+  vertical-align: middle;
+  width: 660px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.site-navigation li {
+  display: inline-block;
+}
+.site-navigation li:not(:last-child) {
+  margin-right: 106px;
+}
+.site-navigation a {
+  display: block;
+}
+
+.article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.article-list-item {
+  display: inline-block;
+  width: 420px;
+}
+.article-list-item:nth-child(2n + 1) {
+  margin-right: 60px;
+}
+.article-list-item:nth-last-child(-n + 2) {
+  margin-bottom: 0;
+}
+
+.article-photo-name {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-weight: 300;
+  color: #b4ad9e;
+  font-size: 14px;
+  line-height: 17px; /*высота строки с учетом отступов*/
+}
+.article-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.article-content {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
