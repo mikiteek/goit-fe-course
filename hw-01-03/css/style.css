@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Playfair Display", "Arial", serif;
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px; /*высота строки с учетом отступов*/
+}
+img {
+  /*так картинки будут правильно себя вести*/
+  display: block;
+  max-width: 100%; /*чтобы картинка не растягивалась больше оригинального размера*/
+  height: auto;
+}
