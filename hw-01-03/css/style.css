@@ -78,6 +78,8 @@ img {
 }
 
 .article-photo-name {
+  margin-top: 30px;
+  margin-bottom: 32px;
   font-family: "Ubuntu", "Arial", sans-serif;
   font-weight: 300;
   color: #b4ad9e;
@@ -87,6 +89,7 @@ img {
 .article-title {
   font-size: 30px;
   line-height: 36px;
+  margin-bottom: 36px;
 }
 
 .article-content {
