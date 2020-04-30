@@ -17,7 +17,7 @@ body {
 img {
   /*так картинки будут правильно себя вести*/
   display: block;
-  max-width: 100%; /*чтобы картинка не растягивалась больше оригинального размера*/
+  max-width: 100%; /*чтобы картинка не растягивалась больше оригинального размера */
   height: auto;
 }
 .conteiner {
@@ -25,30 +25,31 @@ img {
   margin: 0 auto;
 }
 .page-header {
-  margin-bottom: 68px;
+  margin-bottom: 64px;
 }
 .page-nav {
-  padding: 30px;
+  padding: 30px 0;
 }
 
-.site-navigation {
+.page-navigation {
   display: inline-block;
   vertical-align: middle;
   width: 660px;
-  margin: 0;
+  margin: 0 0 0 100px;
   padding: 0;
   list-style: none;
   text-align: center;
   text-transform: uppercase;
 }
-.site-navigation li {
+.page-navigation li {
   display: inline-block;
 }
-.site-navigation li:not(:last-child) {
+.page-navigation li:not(:last-child) {
   margin-right: 106px;
 }
-.site-navigation a {
+.page-navigation a {
   display: block;
+  text-decoration: none;
 }
 
 .article-list {
@@ -65,7 +66,10 @@ img {
   margin-right: 60px;
 }
 .article-list-item:nth-last-child(-n + 2) {
-  margin-bottom: 0;
+  margin-bottom: 52px;
+}
+.article-list-item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 130px;
 }
 
 .article-photo-name {
