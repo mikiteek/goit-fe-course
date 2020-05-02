@@ -14,7 +14,6 @@ html {
 /*default for all body*/
 body {
   font-family: "Playfair Display", "Arial", serif;
-  font-weight: 400;
   color: #626262;
   font-size: 14px;
   line-height: 24px; /*высота строки с учетом отступов*/
@@ -90,6 +89,7 @@ img {
   font-size: 30px;
   line-height: 36px;
   margin-bottom: 36px;
+  font-weight: 400;
 }
 
 .article-content {
