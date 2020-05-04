@@ -61,7 +61,7 @@ img {
 }
 .page-navigation a:hover,
 .page-navigation a:focus {
-  color: #0000ff;
+  color: #03a9f4;
 }
 
 .article-list {
@@ -110,6 +110,11 @@ img {
   width: 164px;
   height: 60px;
   margin: 0 auto 60px;
+  font-family: "Playfair Display", "Arial", serif;
+  color: #626262;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 }
 .button-load:hover {
   cursor: pointer;
