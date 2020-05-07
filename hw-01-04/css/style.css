@@ -88,6 +88,7 @@ h1::first-letter {
 .featured-products-list li:not(:nth-last-child(-n + 4)) {
   margin-bottom: 30px;
 }
+
 .img-crop {
   position: relative;
   overflow: hidden;
@@ -102,7 +103,7 @@ h1::first-letter {
   list-style: none;
 }
 
-.featured-products-list h3 {
+.product-title {
   float: left;
   width: 201px;
   height: 40px;
@@ -115,7 +116,7 @@ h1::first-letter {
   background-color: #323232;
   padding: 4px 0 0 4px;
 }
-.featured-products-list p {
+.product-price {
   float: right;
   width: 54px;
   height: 40px;
@@ -130,4 +131,11 @@ h1::first-letter {
 }
 .featured-products-list p::before {
   content: "\0024";
+}
+
+.featured-products-list li:hover .product-title {
+  background-color: #7fd9c7;
+}
+.featured-products-list li:hover .product-price {
+  background-color: #1abc9c;
 }
