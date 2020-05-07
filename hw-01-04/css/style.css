@@ -60,3 +60,20 @@ h1::first-letter {
 .page-menu a:focus {
   color: #1abc9c;
 }
+
+.featured-products-title {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  color: #515151;
+  font-weight: 400;
+  text-align: center;
+}
+.featured-products-title::after {
+  display: block;
+  width: 164px;
+  height: 7px;
+  background-color: #1abc9c;
+  margin: 32px auto 92px;
+  content: "";
+}
