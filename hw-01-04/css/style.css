@@ -34,6 +34,7 @@ h1 {
 }
 h1::first-letter {
   color: #1abc9c;
+  font-weight: 800;
 }
 
 .page-menu {
@@ -73,7 +74,7 @@ h1::first-letter {
   font-size: 48px;
   line-height: 48px;
   color: #515151;
-  font-weight: 400;
+  font-weight: 800;
   text-align: center;
   text-transform: uppercase;
 }
@@ -113,7 +114,7 @@ h1::first-letter {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 32px;
-  font-weight: 400;
+  font-weight: 800;
   text-transform: uppercase;
   color: #fff;
   background-color: #323232;
@@ -126,7 +127,7 @@ h1::first-letter {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 32px;
-  font-weight: 400;
+  font-weight: 800;
   color: #fff;
   background-color: #8c8c8c;
   padding: 4px 0 0 4px;
@@ -153,7 +154,7 @@ h1::first-letter {
   font-size: 48px;
   line-height: 48px;
   color: #555252;
-  font-weight: 400;
+  font-weight: 800;
   text-align: center;
   text-transform: uppercase;
 }
