@@ -61,6 +61,10 @@ h1::first-letter {
   color: #1abc9c;
 }
 
+.featured-products {
+  margin-bottom: 104px;
+}
+
 .featured-products-title {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 48px;
@@ -76,4 +80,54 @@ h1::first-letter {
   background-color: #1abc9c;
   margin: 32px auto 92px;
   content: "";
+}
+.featured-products-list li:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+.featured-products-list li:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 30px;
+}
+.featured-products-list li {
+  float: left;
+  width: 255px;
+  height: 322px;
+  background-color: #e9f0fd;
+  list-style: none;
+  outline: solid 1px red; /**/
+}
+.featured-products-list img {
+  outline: solid 1px lime; /**/
+  margin: 0 auto;
+  /* width: 255px;
+  height: 282px; */
+}
+
+.featured-products-list h3 {
+  float: left;
+  width: 201px;
+  height: 40px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #323232;
+  padding: 4px 0 0 4px;
+}
+.featured-products-list p {
+  float: right;
+  width: 54px;
+  height: 40px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #8c8c8c;
+  padding: 4px 0 0 4px;
+  text-align: center;
+}
+.featured-products-list p::before {
+  content: "\0024";
 }
