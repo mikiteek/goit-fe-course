@@ -19,6 +19,7 @@ img {
   clear: both;
 }
 
+/*PAGE HEADER, NAV MENU*/
 .page-nav {
   padding: 38px 0 100px 0;
 }
@@ -62,6 +63,7 @@ h1::first-letter {
   color: #1abc9c;
 }
 
+/*FEATURED PRODUCTS SECTION*/
 .featured-products {
   margin-bottom: 104px;
 }
@@ -73,6 +75,7 @@ h1::first-letter {
   color: #515151;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
 }
 .featured-products-title::after {
   display: block;
@@ -81,6 +84,13 @@ h1::first-letter {
   background-color: #1abc9c;
   margin: 32px auto 92px;
   content: "";
+}
+.featured-products-list li {
+  float: left;
+  width: 255px;
+  height: 322px;
+  list-style: none;
+  cursor: pointer;
 }
 .featured-products-list li:not(:nth-child(4n)) {
   margin-right: 30px;
@@ -94,13 +104,6 @@ h1::first-letter {
   overflow: hidden;
   width: 255px;
   height: 282px;
-}
-.featured-products-list li {
-  float: left;
-  width: 255px;
-  height: 322px;
-  background-color: #e9f0fd;
-  list-style: none;
 }
 
 .product-title {
@@ -138,4 +141,72 @@ h1::first-letter {
 }
 .featured-products-list li:hover .product-price {
   background-color: #1abc9c;
+}
+
+/*LATEST NEWS SECTION*/
+.latest-news {
+  margin-bottom: 82px;
+}
+
+.latest-news-title {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  color: #555252;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.latest-news-title::after {
+  display: block;
+  width: 164px;
+  height: 7px;
+  background-color: #1abc9c;
+  margin: 32px auto 80px;
+  content: "";
+}
+.latest-news-list li {
+  float: left;
+  width: 350px;
+  height: auto;
+  list-style: none;
+}
+.latest-news-list li:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.news-title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: #555252;
+  font-weight: 600;
+}
+.news-title::after {
+  display: block;
+  width: 136px;
+  height: 3px;
+  background-color: #4ec6ab;
+  margin: 10px 0 26px;
+  content: "";
+}
+.news-article {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #555252;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.read-more-button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 300;
+  background-color: #4ec6ab;
+  width: 160px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 0;
 }
