@@ -55,6 +55,7 @@ h1::first-letter {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer;
 }
 .page-menu a:hover,
 .page-menu a:focus {
@@ -87,19 +88,18 @@ h1::first-letter {
 .featured-products-list li:not(:nth-last-child(-n + 4)) {
   margin-bottom: 30px;
 }
+.img-crop {
+  position: relative;
+  overflow: hidden;
+  width: 255px;
+  height: 282px;
+}
 .featured-products-list li {
   float: left;
   width: 255px;
   height: 322px;
   background-color: #e9f0fd;
   list-style: none;
-  outline: solid 1px red; /**/
-}
-.featured-products-list img {
-  outline: solid 1px lime; /**/
-  margin: 0 auto;
-  /* width: 255px;
-  height: 282px; */
 }
 
 .featured-products-list h3 {
