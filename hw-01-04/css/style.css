@@ -118,7 +118,7 @@ h1::first-letter {
   text-transform: uppercase;
   color: #fff;
   background-color: #323232;
-  padding: 4px 0 0 4px;
+  padding: 5px 0 0 14px;
 }
 .product-price {
   float: right;
@@ -130,7 +130,7 @@ h1::first-letter {
   font-weight: 800;
   color: #fff;
   background-color: #8c8c8c;
-  padding: 4px 0 0 4px;
+  padding-top: 5px;
   text-align: center;
 }
 .featured-products-list p::before {
