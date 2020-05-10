@@ -56,7 +56,7 @@ h1::first-letter {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
+  color: #0f0101;
   cursor: pointer;
 }
 .page-menu a:hover,
