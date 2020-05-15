@@ -149,6 +149,7 @@ h1::first-letter {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
 .collection-title {
   font-size: 48px;
   line-height: 48px;
@@ -165,28 +166,29 @@ h1::first-letter {
   margin: 32px auto 80px;
 }
 
-.collection-list li {
+.collection-list-item {
   position: relative;
   display: inline-block;
   width: 255px;
   height: 322px;
   cursor: pointer;
 }
-.collection-list li:not(:last-child) {
+.collection-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-/* .collection-item-desc {
-  position: relative;
-} */
-
-.collection-list li:hover .collection-item-title,
-.collection-list li:focus .collection-item-title {
+.collection-list-item:hover .collection-item-title,
+.collection-list-item:focus .collection-item-title {
   background-color: #1abc9c;
 }
-.collection-list li:hover .collection-item-price,
-.collection-list li:focus .collection-item-price {
+.collection-list-item:hover .collection-item-price,
+.collection-list-item:focus .collection-item-price {
   background-color: #7fd9c7;
+}
+
+.collection-list-item:hover .collection-item-bgr,
+.collection-list-item:focus .collection-item-bgr {
+  z-index: 3;
 }
 
 .collection-item-title,
@@ -203,6 +205,7 @@ h1::first-letter {
   padding: 4px 0 0 12px;
   position: absolute;
   bottom: 0;
+  z-index: 10;
 }
 .collection-item-price {
   width: 54px;
@@ -213,7 +216,89 @@ h1::first-letter {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 10;
 }
 .collection-item-price::before {
   content: "\0024";
+}
+.collection-list img {
+  position: absolute;
+  z-index: 2;
+}
+
+.collection-item-bgr {
+  position: absolute;
+  width: 255px;
+  height: 282px;
+  border: 10px solid #fff;
+  background-color: #000;
+  opacity: 0.549;
+}
+
+.collection-item-cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 166px;
+  height: 108px;
+  margin: auto;
+}
+
+.collection-item-cards li {
+  display: inline-block;
+  list-style: none;
+}
+.collection-item-cards li:not(:nth-last-child(-n + 2)) {
+  margin-right: 8px;
+}
+.collection-item-cards li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.icon-heard {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-image: url(/img/icons/icon-heart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-thing {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-image: url(/img/icons/icon-middle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-clock {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-image: url(/img/icons/icon-clock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-basket {
+  width: 166px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-image: url(/img/icons/icon-basket.png);
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 0 0 54px;
+}
+.icon-basket:hover,
+.icon-thing:hover,
+.icon-heard:hover,
+.icon-clock:hover {
+  background-color: #1abc9c;
 }
