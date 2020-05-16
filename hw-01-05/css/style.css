@@ -101,11 +101,11 @@ h1::first-letter {
 }
 .slider-ctrl-prev {
   left: 0;
-  background-image: url("../img/icons/slider-left.png");
+  background-image: url("img/icons/slider-left.png");
 }
 .slider-ctrl-next {
   right: 0;
-  background-image: url("../img/icons/slider-right.png");
+  background-image: url("img/icons/slider-right.png");
 }
 .slider-ctrl button {
   width: 104px;
@@ -273,20 +273,20 @@ h1::first-letter {
   cursor: pointer;
 }
 .icon-heard {
-  background-image: url("../img/icons/icon-heart.png");
+  background-image: url("img/icons/icon-heart.png");
 }
 .icon-thing {
-  background-image: url("../img/icons/icon-middle.png");
+  background-image: url("img/icons/icon-middle.png");
 }
 .icon-clock {
-  background-image: url("../img/icons/icon-clock.png");
+  background-image: url("img/icons/icon-clock.png");
 }
 .icon-basket {
   width: 166px;
   height: 50px;
   border: 1px solid #fff;
   background-color: transparent;
-  background-image: url("../img/icons/icon-basket.png");
+  background-image: url("img/icons/icon-basket.png");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   cursor: pointer;
