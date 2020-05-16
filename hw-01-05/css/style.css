@@ -91,23 +91,21 @@ h1::first-letter {
 .slider-ctrl {
   position: relative;
 }
-.slider-ctrl-prev {
+.slider-ctrl-prev,
+.slider-ctrl-next {
   position: absolute;
-  left: 0;
   top: 230px;
   z-index: 1;
-  background-image: url(/img/icons/slider-left.png);
   background-repeat: no-repeat;
   background-position: center;
 }
+.slider-ctrl-prev {
+  left: 0;
+  background-image: url(/img/icons/slider-left.png);
+}
 .slider-ctrl-next {
-  position: absolute;
   right: 0;
-  top: 230px;
-  z-index: 1;
   background-image: url(/img/icons/slider-right.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .slider-ctrl button {
   width: 104px;
@@ -116,6 +114,9 @@ h1::first-letter {
   background-color: rgb(78, 198, 171);
   opacity: 0.651;
   cursor: pointer;
+}
+.slider-ctrl button:hover {
+  opacity: 1;
 }
 
 .slides-desc {
@@ -190,6 +191,10 @@ h1::first-letter {
 .collection-list-item:focus .collection-item-bgr {
   z-index: 3;
 }
+.collection-list-item:hover .collection-item-cards,
+.collection-list-item:focus .collection-item-cards {
+  z-index: 4;
+}
 
 .collection-item-title,
 .collection-item-price {
@@ -245,62 +250,61 @@ h1::first-letter {
   margin: auto;
 }
 
-.collection-item-cards li {
+.collection-item-cards button {
   display: inline-block;
   list-style: none;
 }
-.collection-item-cards li:not(:nth-last-child(-n + 2)) {
+.collection-item-cards button:not(:nth-last-child(-n + 2)) {
   margin-right: 8px;
 }
-.collection-item-cards li:not(:last-child) {
+.collection-item-cards button:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.icon-heard {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  background-image: url(/img/icons/icon-heart.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.icon-thing {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  background-image: url(/img/icons/icon-middle.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+.icon-heard,
+.icon-thing,
 .icon-clock {
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
-  background-image: url(/img/icons/icon-clock.png);
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
-
+.icon-heard {
+  background-image: url(/img/icons/icon-heart.png);
+}
+.icon-thing {
+  background-image: url(/img/icons/icon-middle.png);
+}
+.icon-clock {
+  background-image: url(/img/icons/icon-clock.png);
+}
 .icon-basket {
   width: 166px;
   height: 50px;
   border: 1px solid #fff;
+  background-color: transparent;
   background-image: url(/img/icons/icon-basket.png);
   background-repeat: no-repeat;
   background-position: 10px 10px;
+  cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 32px;
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 10px 0 0 54px;
+  padding-left: 45px;
 }
-.icon-basket:hover,
 .icon-thing:hover,
 .icon-heard:hover,
 .icon-clock:hover {
   background-color: #1abc9c;
+}
+.icon-basket:hover {
+  background-color: #323232;
 }
 
 /* FOOTER */
