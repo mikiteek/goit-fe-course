@@ -162,7 +162,8 @@ dist/
 # Visual Studio Code - https://code.visualstudio.com/
 .settings/
 .vscode-test
-.vscode/*
+# .vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

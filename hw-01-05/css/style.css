@@ -24,6 +24,10 @@ img {
   margin: 0 auto;
 }
 
+/* .container {
+  width: 100vh;
+} */
+
 /* HEADER */
 .header-page {
   padding-top: 36px;
@@ -72,9 +76,11 @@ h1::first-letter {
 
 /* SLIDER */
 .slider {
-  width: 1600px;
   height: 600px;
-  margin: 0 auto;
+  background-image: url("../img/slide-shadow-with.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 .slides {
@@ -82,11 +88,6 @@ h1::first-letter {
 }
 .slides li {
   position: relative;
-}
-.slides-image {
-  height: 600px;
-  width: 100%;
-  object-fit: cover;
 }
 .slider-ctrl {
   position: relative;
@@ -144,7 +145,7 @@ h1::first-letter {
 .section {
   margin: 0 auto;
   background-color: #e9f0fd;
-  width: 1600px;
+  background-size: cover;
 }
 .collection {
   padding-top: 100px;
@@ -309,9 +310,9 @@ h1::first-letter {
 
 /* FOOTER */
 .footer-page {
-  width: 1600px;
   height: 88px;
   background-color: #323232;
+  background-size: cover;
   margin: 0 auto;
   padding-top: 36px;
 }
