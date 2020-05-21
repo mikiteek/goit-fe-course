@@ -27,7 +27,8 @@ li {
 }
 
 .wrapper {
-  width: 1200px;
+  /*целесообразно ли?*/
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -44,6 +45,7 @@ li {
 .header-nav-list {
   width: 490px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 h1,
@@ -76,4 +78,38 @@ h1 {
   width: 100%;
   background-color: #f38181;
   content: "";
+}
+
+/* -- M A I N -- */
+.section-title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+}
+.section-desc::after {
+  content: "";
+  height: 3px;
+  width: 60px;
+  display: block;
+  background-color: #f38181;
+  margin: 38px auto 0;
+}
+/* We work section */
+.services-list {
+  padding-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-list-item {
+  width: 381px;
 }
