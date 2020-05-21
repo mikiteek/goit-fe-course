@@ -232,8 +232,6 @@ h1 {
     rgba(252, 227, 138, 0.9) 0%,
     rgba(243, 129, 129, 0.9) 100%
   );
-  z-index: 1;
-  transition: background-image 1s linear;
 }
 .team-list-social {
   display: flex;
@@ -287,6 +285,56 @@ h1 {
 .team-item-job {
   font-style: italic;
   font-weight: 300;
+}
+
+/*  -- F O O T E R --  */
+
+.footer-info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 17px;
+}
+.footer-info span {
+  color: #f38181;
+}
+.footer-page {
+  border-top: 1px solid #999;
+  min-height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-page form {
+  height: 40px;
+  width: 380px;
+}
+.input-email {
+  padding-left: 4px;
+  border: 1;
+  border-color: rgb(204, 204, 204);
+  height: 100%;
+  width: 230px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(204, 204, 204);
+  font-style: italic;
+  line-height: 1.6;
+}
+.subscribe-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 17px;
+  text-transform: uppercase;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  width: 146px;
+  background-color: #95e1d3;
+  cursor: pointer;
 }
 
 /* visually-hidden helper */
