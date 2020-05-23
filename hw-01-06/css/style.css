@@ -301,7 +301,7 @@ h1 {
   color: #f38181;
 }
 .footer-page {
-  border-top: 1px solid #999;
+  border-top: solid 1px rgb(231, 231, 231);
   min-height: 62px;
   display: flex;
   justify-content: space-between;
@@ -310,11 +310,11 @@ h1 {
 .footer-page form {
   height: 40px;
   width: 380px;
+  display: flex;
 }
 .input-email {
-  padding-left: 4px;
-  border: 1;
-  border-color: rgb(204, 204, 204);
+  padding-left: 14px;
+  border: solid 1px rgb(231, 231, 231);
   height: 100%;
   width: 230px;
   font-size: 15px;
@@ -333,7 +333,7 @@ h1 {
   height: 100%;
   border: 0;
   border-radius: 0;
-  width: 146px;
+  width: 150px;
   background-color: #95e1d3;
   cursor: pointer;
 }
