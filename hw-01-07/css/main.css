@@ -28,3 +28,36 @@ li {
   max-width: 940px;
   margin: 0 auto;
 }
+
+/*-- H E A D E R --*/
+.header-page {
+  padding: 38px 0 92px;
+}
+.header-nav {
+  min-height: 50px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header-nav-list {
+  width: 485px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+h1 {
+  font-family: "Pacifico", sans-serif;
+  font-size: 26px;
+  line-height: 50px;
+  color: rgb(254, 209, 54);
+}
+.header-nav-list-item a {
+  line-height: 50px;
+  color: #222;
+  text-transform: uppercase;
+}
+.header-nav-list-item a:hover,
+.header-nav-list-item a:focus {
+  color: rgb(254, 209, 54);
+}
