@@ -61,3 +61,20 @@ h1 {
 .header-nav-list-item a:focus {
   color: rgb(254, 209, 54);
 }
+
+/* -- M A I N -- */
+.services-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 75px;
+  margin-bottom: 5px;
+}
+.servisec-desc {
+  text-align: center;
+  font-family: "Allura", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgb(119, 119, 119);
+  margin-bottom: 78px;
+}
