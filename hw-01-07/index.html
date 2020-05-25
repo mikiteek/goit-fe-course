@@ -21,7 +21,7 @@
       </nav>
     </header>
     <main>
-      <section class="services wrapper">
+      <section class="services-section wrapper">
         <h2 class="services-title">Services</h2>
         <p class="servisec-desc">Lorem ipsum dolor sit amet consectetur.</p>
         <ul class="services-list">
@@ -58,5 +58,40 @@
         </ul>
       </section>
     </main>
+    <footer class="footer-page">
+      <section class="contact-section wrapper">
+        <h2 class="contact-title">Contact us</h2>
+        <p class="contact-desc">Lorem ipsum dolor sit amet consectetur.</p>
+        <form action="#" method="get">
+          <div class="contact-input-block">
+            <div class="contact-text">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name *"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your e-mail *"
+                required
+              />
+              <input type="text" name="subject" placeholder="Subject" />
+            </div>
+            <div class="contact-textarea">
+              <textarea
+                name="message"
+                placeholder="Your message *"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button class="input-send-button" type="submit" name="send">
+            Send message
+          </button>
+        </form>
+      </section>
+    </footer>
   </body>
 </html>
