@@ -71,6 +71,7 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   line-height: 75px;
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
 .servisec-desc {
