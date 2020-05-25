@@ -63,6 +63,9 @@ h1 {
 }
 
 /* -- M A I N -- */
+.services {
+  margin-bottom: 122px;
+}
 .services-title {
   text-align: center;
   font-size: 40px;
@@ -78,3 +81,43 @@ h1 {
   color: rgb(119, 119, 119);
   margin-bottom: 78px;
 }
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-list-item {
+  width: 290px;
+}
+.services-item-icon {
+  margin: 0 auto;
+  width: 74px;
+  height: 74px;
+  border: solid 3px rgb(254, 209, 54);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon-basket {
+  background-image: url("../img/icons/icon-basket.png");
+}
+.icon-laptop {
+  background-image: url("../img/icons/icon-laptop.png");
+}
+.icon-locked {
+  background-image: url("../img/icons/icon-locked.png");
+}
+.services-item-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 75px;
+}
+.services-item-desc {
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(119, 119, 119);
+}
+/* -- F O O T E R -- */
