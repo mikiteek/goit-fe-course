@@ -1,5 +1,5 @@
 # Created by https://www.gitignore.io/api/node,bower,linux,sass,less,grunt,code
-
+*.txt
 ### Node ###
 # Logs
 logs
