@@ -11,6 +11,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
   color: rgb(51, 51, 51);
 }
 img {
@@ -27,5 +29,89 @@ li {
 .wrapper {
   max-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+
+/* -- H E A D E R -- */
+.header-page {
+  height: 540px;
+  margin-bottom: 74px; /*media*/
+  padding-top: 20px; /*media*/
+  background-color: rgb(26, 25, 21);
+  background-image: url("../img/slide.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-nav {
+  min-height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  order: 2; /*media*/
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 34px; /*media*/
+}
+
+.header-nav-list {
+  height: 36px;
+  display: flex;
+  margin-bottom: 118px; /*media*/
+}
+.header-nav-list-item:first-child {
+  margin-right: 20px; /*media*/
+}
+.header-nav-list-item a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+}
+.sign-in {
+  width: 90px;
+  border: 2px solid #fff;
+  border-radius: 36px;
+}
+.header-about {
+  text-align: center;
+}
+
+.header-about p:nth-child(2) {
+  margin-bottom: 20px;
+}
+.header-about-find {
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #fff;
+}
+.header-about-share {
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-button-find {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(255, 78, 80);
 }
