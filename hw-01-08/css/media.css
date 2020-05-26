@@ -5,8 +5,15 @@
   h1 {
     order: 2;
   }
+  .stn-partner-list-item:nth-child(2) {
+    order: 2;
+  }
   .header-nav-list {
     margin-bottom: 118px;
+  }
+
+  .stn-partner-list {
+    flex-direction: column;
   }
 }
 @media (min-width: 768px) {
@@ -37,9 +44,37 @@
     line-height: 29px;
     margin-bottom: 34px;
   }
+
+  .stn-partner-title {
+    margin-bottom: 34px;
+  }
+  .stn-partner-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .stn-partner {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .conteiner {
+    width: 492px;
+    margin: 0 auto;
+  }
+  .stn-partner-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 60px;
+  }
+  .stn-partner-list-item:nth-last-child(-n + 2) {
+    margin-bottom: 38px;
+  }
 }
 @media (min-width: 1440px) {
   .wrapper {
     width: 940px;
+  }
+  .stn-partner-list-item {
+    width: 220px;
+    margin-bottom: 50px;
   }
 }
