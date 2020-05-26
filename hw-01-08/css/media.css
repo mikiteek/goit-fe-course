@@ -1,0 +1,45 @@
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  h1 {
+    order: 2;
+  }
+  .header-nav-list {
+    margin-bottom: 118px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+  .header-page {
+    height: 700px;
+    padding-top: 38px;
+  }
+  .header-nav {
+    width: 670px;
+    flex-direction: row;
+    margin-bottom: 150px;
+  }
+  h1 {
+    margin-right: auto;
+  }
+  .header-about p:first-child {
+    margin-bottom: 16px;
+  }
+  .header-about-share {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .header-about-find {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 34px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 940px;
+  }
+}

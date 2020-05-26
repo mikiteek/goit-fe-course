@@ -27,9 +27,9 @@ li {
   list-style: none;
 }
 .wrapper {
-  max-width: 320px;
+  width: 320px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
 }
 
 /* -- H E A D E R -- */
@@ -48,22 +48,22 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 34px;
 }
 
 h1 {
-  order: 2; /*media*/
+  /* order: 2; /*media*/
   font-size: 20px;
   font-weight: bold;
   line-height: 24px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 34px; /*media*/
 }
 
 .header-nav-list {
   height: 36px;
   display: flex;
-  margin-bottom: 118px; /*media*/
+  /*margin-bottom: 118px; /*media*/
 }
 .header-nav-list-item:first-child {
   margin-right: 20px; /*media*/
@@ -104,7 +104,7 @@ h1 {
   text-transform: uppercase;
 }
 .header-button-find {
-  width: 100%;
+  width: 280px;
   height: 40px;
   border: none;
   border-radius: 40px;
