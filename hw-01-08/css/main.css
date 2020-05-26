@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
