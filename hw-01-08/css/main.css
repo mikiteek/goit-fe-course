@@ -29,7 +29,6 @@ li {
 .wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 0;
 }
 
 /* -- H E A D E R -- */
@@ -44,7 +43,6 @@ li {
   background-position: center;
 }
 .header-nav {
-  min-height: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +50,6 @@ li {
 }
 
 h1 {
-  /* order: 2; /*media*/
   font-size: 20px;
   font-weight: bold;
   line-height: 24px;
@@ -63,10 +60,9 @@ h1 {
 .header-nav-list {
   height: 36px;
   display: flex;
-  /*margin-bottom: 118px; /*media*/
 }
 .header-nav-list-item:first-child {
-  margin-right: 20px; /*media*/
+  margin-right: 20px;
 }
 .header-nav-list-item a {
   height: 100%;
@@ -84,9 +80,6 @@ h1 {
   text-align: center;
 }
 
-.header-about p:nth-child(2) {
-  margin-bottom: 20px;
-}
 .header-about-find {
   margin: 0 auto;
   width: 80%;
@@ -136,9 +129,7 @@ h1 {
 .stn-partner-list-item {
   width: 236px;
 }
-.stn-partner-list-item:not(:last-child) {
-  margin-bottom: 30px;
-}
+
 .stn-partner-list-item img {
   margin: 0 auto 22px;
 }
