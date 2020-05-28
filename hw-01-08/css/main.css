@@ -62,17 +62,18 @@ h1 {
   display: flex;
 }
 .header-nav-list-item:first-child {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .header-nav-list-item a {
+  min-width: 90px;
   height: 100%;
   display: flex;
   justify-content: center;
   color: #fff;
   align-items: center;
 }
-.sign-in {
-  width: 90px;
+.header-nav-list-item a:hover,
+.header-nav-list-item a:focus {
   border: 2px solid #fff;
   border-radius: 36px;
 }
@@ -112,8 +113,8 @@ h1 {
 
 /* -- M A I N -- */
 
-.stn-partner {
-  margin-bottom: 57px;
+.main-page {
+  padding-bottom: 57px;
 }
 .stn-partner-title {
   margin-bottom: 18px;
