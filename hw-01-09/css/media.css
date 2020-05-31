@@ -1,0 +1,52 @@
+@media (max-width: 767px) {
+  .align-self-cnt {
+    justify-content: center;
+  }
+  .header-nav-list {
+    margin-bottom: 118px;
+    justify-content: center;
+  }
+  .header-about p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  /* .stn-partner-list-item:nth-child(2) {
+    order: 3;
+  }
+  .stn-partner-list-item:nth-child(4) {
+    order: 4;
+  }
+
+  .stn-partner-list {
+    flex-direction: column;
+  }
+  .stn-partner-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  } */
+}
+@media (min-width: 768px) {
+  .wrapper-header {
+    height: 700px;
+    padding-top: 38px;
+  }
+  .header-nav {
+    padding-bottom: 150px;
+  }
+  .header-nav-list {
+    justify-content: flex-end;
+  }
+  .header-about p:nth-child(2) {
+    margin-bottom: 40px;
+  }
+  .header-about p:first-child {
+    margin-bottom: 16px;
+  }
+  .header-about-share {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .header-about-find {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 34px;
+  }
+}
