@@ -9,19 +9,10 @@
   .header-about p:nth-child(2) {
     margin-bottom: 20px;
   }
-  /* .stn-partner-list-item:nth-child(2) {
-    order: 3;
-  }
-  .stn-partner-list-item:nth-child(4) {
-    order: 4;
-  }
 
-  .stn-partner-list {
-    flex-direction: column;
-  }
   .stn-partner-list-item:not(:last-child) {
-    margin-bottom: 30px;
-  } */
+    padding-bottom: 30px;
+  }
 }
 @media (min-width: 768px) {
   .wrapper-header {
@@ -48,5 +39,16 @@
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 34px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .stn-partner-list {
+    width: 492px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1440px) {
+  .stn-partner-list-item {
+    width: 220px;
   }
 }
