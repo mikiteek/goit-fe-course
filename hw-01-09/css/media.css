@@ -13,11 +13,17 @@
   .stn-partner-list-item:not(:last-child) {
     padding-bottom: 30px;
   }
+  .block-li {
+    width: 236px;
+  }
 }
 @media (min-width: 768px) {
   .wrapper-header {
     height: 700px;
     padding-top: 38px;
+  }
+  .wrapper-main {
+    padding-bottom: 40px;
   }
   .header-nav {
     padding-bottom: 150px;
@@ -40,15 +46,24 @@
     line-height: 29px;
     margin-bottom: 34px;
   }
-}
-@media (min-width: 768px) and (max-width: 1439px) {
+  .stn-partner-title {
+    padding-bottom: 34px;
+  }
   .stn-partner-list {
-    width: 492px;
+    padding-bottom: 38px;
     margin: 0 auto;
   }
 }
-@media (min-width: 1440px) {
-  .stn-partner-list-item {
-    width: 220px;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .stn-partner-list {
+    width: 522px;
+  }
+  .stn-partner-list-item:not(:nth-last-child(-n + 2)) {
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .stn-partner-list {
+    width: 1000px;
   }
 }
