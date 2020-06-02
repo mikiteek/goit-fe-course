@@ -6,10 +6,9 @@
     margin-bottom: 118px;
     justify-content: center;
   }
-  .header-about p:nth-child(2) {
-    margin-bottom: 20px;
+  .header-about-find {
+    max-width: 240px;
   }
-
   .stn-partner-list-item:not(:last-child) {
     padding-bottom: 30px;
   }
@@ -31,11 +30,10 @@
   .header-nav-list {
     justify-content: flex-end;
   }
-  .header-about p:nth-child(2) {
+
+  .header-about-share::after {
+    margin-top: 16px;
     margin-bottom: 40px;
-  }
-  .header-about p:first-child {
-    margin-bottom: 16px;
   }
   .header-about-share {
     font-size: 52px;
