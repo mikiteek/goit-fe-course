@@ -1,0 +1,132 @@
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+$gradient: (90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+$font-montserrat: "Montserrat", sans-serif;
+$font-kaushan: "Kaushan Script", cursive;
+$color-beige: #fce38a;
+
+@mixin font-style($family, $size, $height, $weight, $font-col, $upper: none) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $font-col;
+  text-transform: $upper;
+}
+
+.link {
+  text-decoration: none;
+}
+.list-item {
+  list-style: none;
+}
+.df-jb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.df-jc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin bg-image($color, $img-path: url("")) {
+  background-image: -moz-linear-gradient($color), $img-path;
+  background-image: -ms-linear-gradient($color), $img-path;
+  background-image: -webkit-linear-gradient($color), $img-path;
+}
+
+/* H E A D E R */
+.wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  @include bg-image($gradient, url("../img/back-min.jpg"));
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.page-header {
+  padding-top: 19px;
+}
+.page-nav {
+  margin-bottom: 196px;
+}
+
+.page-logo {
+  @include font-style($font-montserrat, 30px, 1.2, bold, #fff);
+}
+.site-nav {
+  width: 620px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.site-nav__link {
+  position: relative;
+  @include font-style($font-montserrat, 14px, 1.2, 400, #fff, uppercase);
+  &:hover,
+  &:focus {
+    color: $color-beige;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    &::after {
+      position: absolute;
+      display: block;
+      margin-bottom: 10px;
+      height: 3px;
+      width: 100%;
+      background-color: $color-beige;
+      content: "";
+    }
+  }
+}
+.site-nav__btn {
+  fill: #fff;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $color-beige;
+  }
+}
+.title {
+  text-align: center;
+}
+.title__desc {
+  @include font-style($font-kaushan, 72px, 1.2, 400, #fff, none);
+  margin-bottom: 60px;
+}
+.title__header {
+  margin: 0 auto 126px;
+  width: 820px;
+  @include font-style($font-montserrat, 150px, 1, bold, #fff, uppercase);
+}
+.title__link {
+  margin: auto;
+  width: 160px;
+  height: 40px;
+  border: solid 3px #fff;
+  cursor: pointer;
+  @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+}

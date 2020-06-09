@@ -4,7 +4,9 @@
   "description": "hw-01-11 sass",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss:build": "node-sass src/scss/styles.scss -o css",
+    "scss:watch": "node-sass --watch src/scss/styles.scss -o css",
+    "build": "npm run scss:build && npm run scss:watch"
   },
   "author": "Mykyteiek Sergii <mikiteek@gmail.com>",
   "license": "ISC",
