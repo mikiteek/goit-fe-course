@@ -198,15 +198,15 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.services__item {
+.services-list__item {
   width: 380px;
   padding-left: 90px;
   position: relative;
 }
-.services__item:not(:nth-last-child(-n + 3)) {
+.services-list__item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 98px;
 }
-.services__icon {
+.services-list__icon {
   position: absolute;
   left: 0;
   width: 90px;
@@ -214,7 +214,7 @@
   background-position: center;
   fill: rgb(149, 225, 211);
 }
-.services__item--title {
+.services-list__item--title {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -224,7 +224,7 @@
   text-transform: uppercase;
 }
 .team__desc,
-.services__item--desc {
+.services-list__item--desc {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -250,7 +250,7 @@
   width: 380px;
 }
 .item-block,
-.team__item--hover {
+.team-list__item--hover {
   width: 380px;
   height: 470px;
   position: relative;
@@ -262,16 +262,16 @@
   z-index: -1;
   background-color: #95e1d3;
 }
-.team__item--image,
-.team__item--hover {
+.team-list__item--image,
+.team-list__item--hover {
   position: absolute;
   z-index: 1;
 }
-.item-block:hover .team__item--hover {
+.item-block:hover .team-list__item--hover {
   z-index: 2;
 }
-.item-block:hover .team__item--hover,
-.item-block:hover .team__item--image {
+.item-block:hover .team-list__item--hover,
+.item-block:hover .team-list__item--image {
   -webkit-transform: translate(-10px, -10px);
   -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
@@ -315,27 +315,27 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-.social__link {
+.social-list__link {
   width: 55px;
   height: 55px;
   background-color: #fce38a;
 }
-.social__link:hover,
-.social__link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: #f38181;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social__icon {
+.social-list__icon {
   fill: #f38181;
 }
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
   fill: #fff;
 }
 
-.team__item--name {
+.team-list__item--name {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -344,7 +344,7 @@
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-.team__item--occ {
+.team-list__item--occ {
   font-style: italic;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
