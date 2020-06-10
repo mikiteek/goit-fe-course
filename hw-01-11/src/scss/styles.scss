@@ -1,3 +1,4 @@
+*,
 *::after,
 *::before {
   margin: 0;
@@ -5,16 +6,21 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 $gradient: (90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
 $font-montserrat: "Montserrat", sans-serif;
 $font-kaushan: "Kaushan Script", cursive;
+$font-roboto: "Roboto", sans-serif;
 $color-beige: #fce38a;
+$color-purpur: #f38181;
+$color-aquamarine: rgb(149, 225, 211);
+$border-grey: solid 1px rgb(231, 231, 231);
 
 @mixin font-style($family, $size, $height, $weight, $font-col, $upper: none) {
   font-family: $family;
   font-size: $size;
-  font-weight: $weight;
   line-height: $height;
+  font-weight: $weight;
   color: $font-col;
   text-transform: $upper;
 }
@@ -49,6 +55,7 @@ $color-beige: #fce38a;
   background-image: -moz-linear-gradient($color), $img-path;
   background-image: -ms-linear-gradient($color), $img-path;
   background-image: -webkit-linear-gradient($color), $img-path;
+  background-image: linear-gradient($color), $img-path;
 }
 
 /* H E A D E R */
@@ -129,4 +136,225 @@ $color-beige: #fce38a;
   border: solid 3px #fff;
   cursor: pointer;
   @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+}
+
+/* M A I N */
+.servives {
+  padding-top: 50px;
+  padding-bottom: 96px;
+}
+
+.section__title,
+.section__desc {
+  text-align: center;
+}
+.section__title {
+  margin-bottom: 20px;
+  @include font-style($font-kaushan, 24px, 1.2, 400, #333, none);
+}
+.section__desc {
+  @include font-style($font-montserrat, 30px, 1.2, bold, #333, uppercase);
+  &::after {
+    content: "";
+    height: 3px;
+    width: 60px;
+    display: block;
+    background-color: $color-purpur;
+    margin: 38px auto 0;
+  }
+}
+/* SERVICES section*/
+
+.services-list {
+  padding-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.services-list__item {
+  width: 380px;
+  padding-left: 90px;
+  position: relative;
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 98px;
+  }
+}
+.services-list__icon {
+  position: absolute;
+  left: 0;
+  width: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: $color-aquamarine;
+}
+.services-list__item--title {
+  @include font-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
+  margin-bottom: 16px;
+}
+.team__desc,
+.services-list__item--desc {
+  @include font-style($font-roboto, 15px, 24px, 400, #999);
+}
+
+/* TEAM SECTION*/
+.team {
+  padding-bottom: 78px;
+}
+.team__desc {
+  margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 90px;
+  max-width: 980px;
+  text-align: center;
+}
+.item-block {
+  margin-bottom: 30px;
+  &:hover .team-list__item--hover,
+  &:focus .team-list__item--hover {
+    z-index: 2;
+  }
+  &:hover .team-list__item--hover,
+  &:focus .team-list__item--hover,
+  &:hover .team-list__item--image,
+  &:focus .team-list__item--image {
+    -webkit-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  }
+}
+.team-list-item {
+  width: 380px;
+}
+.item-block,
+.team-list__item--hover {
+  width: 380px;
+  height: 470px;
+  position: relative;
+}
+.image-behind {
+  position: absolute;
+  width: 380px;
+  height: 470px;
+  z-index: -1;
+  background-color: #95e1d3;
+}
+.team-list__item--image,
+.team-list__item--hover {
+  position: absolute;
+  z-index: 1;
+}
+.image-gradient {
+  position: absolute;
+  cursor: pointer;
+  width: 380px;
+  height: 470px;
+  @include bg-image($gradient);
+}
+.social-list {
+  position: absolute;
+  width: 223px;
+  height: 55px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.social-list__link {
+  width: 55px;
+  height: 55px;
+  background-color: $color-beige;
+  &:hover,
+  &:focus {
+    background-color: $color-purpur;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    fill: #fff;
+  }
+}
+.social-list__icon {
+  fill: $color-purpur;
+}
+.team-list__item--name {
+  @include font-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
+  margin-bottom: 10px;
+}
+.team-list__item--occ {
+  @include font-style($font-roboto, 15px, 24px, 300, #999);
+  font-style: italic;
+}
+
+/*-- F O O T E R --*/
+.footer__info {
+  @include font-style($font-montserrat, 14px, 1.2, 400, #333);
+}
+.footer__info span {
+  color: $color-purpur;
+}
+.footer {
+  border-top: $border-grey;
+  min-height: 62px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.form-subcsribe {
+  height: 40px;
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-subcsribe__email {
+  padding-left: 14px;
+  border: $border-grey;
+  width: 230px;
+  /* просто через запятую не хочет*/
+  &::-moz-placeholder {
+    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    font-style: italic;
+  }
+  &::-webkit-input-placeholder {
+    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    font-style: italic;
+  }
+  &:-ms-input-placeholder {
+    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    font-style: italic;
+  }
+  &::-ms-input-placeholder {
+    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    font-style: italic;
+  }
+  &::placeholder {
+    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    font-style: italic;
+  }
+}
+
+.form-subcsribe__button {
+  @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+  border: none;
+  width: 150px;
+  background-color: $color-aquamarine;
+  cursor: pointer;
+}
+
+/* M E D I A for retina screens*/
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .wrapper {
+    @include bg-image($gradient, url("../img/back@2x-min.jpg"));
+  }
 }
