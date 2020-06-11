@@ -1,0 +1,15 @@
+@mixin font-style($family, $size, $height, $weight, $font-col, $upper: none) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $font-col;
+  text-transform: $upper;
+}
+
+@mixin bg-image($color, $img-path: url("")) {
+  background-image: -moz-linear-gradient($color), $img-path;
+  background-image: -ms-linear-gradient($color), $img-path;
+  background-image: -webkit-linear-gradient($color), $img-path;
+  background-image: linear-gradient($color), $img-path;
+}

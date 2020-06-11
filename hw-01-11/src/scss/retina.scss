@@ -1,0 +1,5 @@
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .wrapper {
+    @include bg-image($gradient, url("../img/back@2x-min.jpg"));
+  }
+}

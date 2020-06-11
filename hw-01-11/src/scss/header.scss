@@ -1,0 +1,78 @@
+.wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  @include bg-image($gradient, url("../img/back-min.jpg"));
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.page-header {
+  padding-top: 19px;
+}
+.page-nav {
+  margin-bottom: 196px;
+}
+
+.page-logo {
+  @include font-style($font-montserrat, 30px, 1.2, bold, #fff);
+}
+.site-nav {
+  width: 620px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.site-nav__link {
+  position: relative;
+  @include font-style($font-montserrat, 14px, 1.2, 400, #fff, uppercase);
+  &:hover,
+  &:focus {
+    color: $color-beige;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    &::after {
+      position: absolute;
+      display: block;
+      margin-bottom: 10px;
+      height: 3px;
+      width: 100%;
+      background-color: $color-beige;
+      content: "";
+    }
+  }
+}
+.site-nav__btn {
+  fill: #fff;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $color-beige;
+  }
+}
+.title {
+  text-align: center;
+}
+.title__desc {
+  @include font-style($font-kaushan, 72px, 1.2, 400, #fff, none);
+  margin-bottom: 60px;
+}
+.title__header {
+  margin: 0 auto 126px;
+  width: 820px;
+  @include font-style($font-montserrat, 150px, 1, bold, #fff, uppercase);
+}
+.title__link {
+  margin: auto;
+  width: 160px;
+  height: 40px;
+  border: solid 3px #fff;
+  cursor: pointer;
+  @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+}
