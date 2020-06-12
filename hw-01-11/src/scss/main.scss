@@ -2,17 +2,16 @@
   padding-top: 50px;
   padding-bottom: 96px;
 }
-
 .section__title,
 .section__desc {
   text-align: center;
 }
 .section__title {
   margin-bottom: 20px;
-  @include font-style($font-kaushan, 24px, 1.2, 400, #333, none);
+  @include myfont-style($font-kaushan, 24px, 1.2, 400, #333, none);
 }
 .section__desc {
-  @include font-style($font-montserrat, 30px, 1.2, bold, #333, uppercase);
+  @include myfont-style($font-montserrat, 30px, 1.2, bold, #333, uppercase);
   &::after {
     content: "";
     height: 3px;
@@ -33,6 +32,7 @@
   flex-wrap: wrap;
 }
 .services-list__item {
+  @extend %list-item;
   width: 380px;
   padding-left: 90px;
   position: relative;
@@ -49,12 +49,12 @@
   fill: $color-aquamarine;
 }
 .services-list__item--title {
-  @include font-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
   margin-bottom: 16px;
 }
 .team__desc,
 .services-list__item--desc {
-  @include font-style($font-roboto, 15px, 24px, 400, #999);
+  @include myfont-style($font-roboto, 15px, 24px, 400, #999);
 }
 
 /* TEAM SECTION*/
@@ -88,9 +88,14 @@
     transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   }
 }
-.team-list-item {
-  width: 380px;
+.team-list {
+  @extend %df-jb;
+  &__item {
+    @extend %list-item;
+    width: 380px;
+  }
 }
+
 .item-block,
 .team-list__item--hover {
   width: 380px;
@@ -117,6 +122,7 @@
   @include bg-image($gradient);
 }
 .social-list {
+  @extend %df-jb;
   position: absolute;
   width: 223px;
   height: 55px;
@@ -126,8 +132,12 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
+  &__item {
+    @extend %list-item;
+  }
 }
 .social-list__link {
+  @extend %df-jc;
   width: 55px;
   height: 55px;
   background-color: $color-beige;
@@ -147,10 +157,10 @@
   fill: $color-purpur;
 }
 .team-list__item--name {
-  @include font-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, 400, #333, uppercase);
   margin-bottom: 10px;
 }
 .team-list__item--occ {
-  @include font-style($font-roboto, 15px, 24px, 300, #999);
+  @include myfont-style($font-roboto, 15px, 24px, 300, #999);
   font-style: italic;
 }

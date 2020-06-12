@@ -13,21 +13,28 @@
   padding-top: 19px;
 }
 .page-nav {
+  @extend %df-jb;
   margin-bottom: 196px;
 }
 
 .page-logo {
-  @include font-style($font-montserrat, 30px, 1.2, bold, #fff);
+  @extend %link;
+  @include myfont-style($font-montserrat, 30px, 1.2, bold, #fff);
 }
 .site-nav {
+  @extend %df-jb;
   width: 620px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
+.site-nav__item {
+  @extend %list-item;
+}
 .site-nav__link {
+  @extend %link;
   position: relative;
-  @include font-style($font-montserrat, 14px, 1.2, 400, #fff, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, 400, #fff, uppercase);
   &:hover,
   &:focus {
     color: $color-beige;
@@ -45,6 +52,7 @@
     }
   }
 }
+
 .site-nav__btn {
   fill: #fff;
   height: 32px;
@@ -60,19 +68,20 @@
   text-align: center;
 }
 .title__desc {
-  @include font-style($font-kaushan, 72px, 1.2, 400, #fff, none);
+  @include myfont-style($font-kaushan, 72px, 1.2, 400, #fff, none);
   margin-bottom: 60px;
 }
 .title__header {
   margin: 0 auto 126px;
   width: 820px;
-  @include font-style($font-montserrat, 150px, 1, bold, #fff, uppercase);
+  @include myfont-style($font-montserrat, 150px, 1, bold, #fff, uppercase);
 }
 .title__link {
+  @extend %df-jc;
   margin: auto;
   width: 160px;
   height: 40px;
   border: solid 3px #fff;
   cursor: pointer;
-  @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
 }

@@ -1,4 +1,4 @@
-@mixin font-style($family, $size, $height, $weight, $font-col, $upper: none) {
+@mixin myfont-style($family, $size, $height, $weight, $font-col, $upper: none) {
   font-family: $family;
   font-size: $size;
   line-height: $height;

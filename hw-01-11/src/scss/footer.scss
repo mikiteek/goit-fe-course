@@ -1,5 +1,8 @@
+.footer {
+  @extend %df-jb;
+}
 .footer__info {
-  @include font-style($font-montserrat, 14px, 1.2, 400, #333);
+  @include myfont-style($font-montserrat, 14px, 1.2, 400, #333);
 }
 .footer__info span {
   color: $color-purpur;
@@ -24,29 +27,29 @@
   width: 230px;
   /* просто через запятую не хочет*/
   &::-moz-placeholder {
-    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    @include myfont-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
     font-style: italic;
   }
   &::-webkit-input-placeholder {
-    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    @include myfont-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
     font-style: italic;
   }
   &:-ms-input-placeholder {
-    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    @include myfont-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
     font-style: italic;
   }
   &::-ms-input-placeholder {
-    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    @include myfont-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
     font-style: italic;
   }
   &::placeholder {
-    @include font-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
+    @include myfont-style($font-roboto, 15px, 1.6, 400, rgb(204, 204, 204));
     font-style: italic;
   }
 }
 
 .form-subcsribe__button {
-  @include font-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
   border: none;
   width: 150px;
   background-color: $color-aquamarine;
