@@ -76,7 +76,7 @@ li {
 
 .header-about-find {
   margin: 0 auto;
-  width: 80%;
+  /* width: 80%; */
   margin-bottom: 18px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -85,16 +85,14 @@ li {
   color: #fff;
 }
 .header-about-share {
+  margin-bottom: 20px;
+
   font-size: 30px;
   line-height: 36px;
   color: #fff;
   text-transform: uppercase;
 }
-.header-about-share::after {
-  display: block;
-  content: "Holiday dreams";
-  margin-bottom: 20px;
-}
+
 .header-button-find {
   width: 280px;
   height: 40px;

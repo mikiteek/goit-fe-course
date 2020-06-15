@@ -1,3 +1,9 @@
+@media (max-width: 320px) {
+  .header-about-share {
+    margin-left: -0.5px;
+    margin-right: -0.5px;
+  }
+}
 @media (max-width: 767px) {
   .align-self-cnt {
     justify-content: center;
@@ -6,6 +12,7 @@
     margin-bottom: 118px;
     justify-content: center;
   }
+
   .header-about-find {
     max-width: 240px;
   }
@@ -30,15 +37,12 @@
   .header-nav-list {
     justify-content: flex-end;
   }
-
-  .header-about-share::after {
-    margin-top: 16px;
-    margin-bottom: 40px;
-  }
   .header-about-share {
+    margin-bottom: 40px;
     font-size: 52px;
     line-height: 62px;
   }
+
   .header-about-find {
     font-size: 24px;
     line-height: 29px;
