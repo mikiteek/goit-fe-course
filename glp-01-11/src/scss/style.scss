@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  padding-top: 100px;
+  @media (max-width: 767px) {
+    background-color: blueviolet;
+  }
+}
+
+a {
+  @media (max-width: 767px) {
+    color: chocolate;
+  }
+}

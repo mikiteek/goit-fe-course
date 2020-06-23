@@ -24,11 +24,14 @@ const path = {
 
 const { src, dest } = require("gulp"),
   gulp = require("gulp"),
-  brsync = require("browser-sync").create(),
-  // work with different files and include to one html, build to one html
-  fileinclude = require("gulp-file-include"),
-  del = require("del"),
-  scss = require("gulp-sass");
+  brsync = require("browser-sync").create(),// browser live
+  fileinclude = require("gulp-file-include"),// work with different files and include to one html, build to one html
+  del = require("del"), // deteting 'dist' forder before build project
+  scss = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  groupMedia = require("gulp-group-css-media-queries"),
+  cleanCss = require("gulp-clean-css"), // compress css
+  rename = require("gulp-rename") // rename extname to .min.css
 
 function browserSync(params) {
   brsync.init({
@@ -50,11 +53,17 @@ function html() {
 //Function for work with css-files
 function css() {
   return src(path.src.css)
-    .pipe(scss({
-      outputStyle: "expanded",//чтоб без сжатия пока формировался css
+    .pipe(scss({ outputStyle: "expanded"})) //чтоб без сжатия пока формировался css
+    .pipe(groupMedia())
+    .pipe(autoprefixer({
+      overrideBrowserslist: ["last 5 versions"],
+      cascade: true,
     }))
-    .pipe(dest(path.build.css)) //путь к папке результата
-    .pipe(brsync.stream()); //обновим браузер вроде
+    .pipe(dest(path.build.css)) // build нашего выходного файла css BEFORE сжатием .css, указываем путь куда выгружать
+    .pipe(cleanCss())
+    .pipe(rename({extname: ".min.css"}))
+    .pipe(dest(path.build.css)) // build нашего выходного файла css AFTER сжатия .min.css
+    .pipe(brsync.stream()); //обновим браузер
 }
 
 // for live watching of html-partials
