@@ -27,7 +27,8 @@ const { src, dest } = require("gulp"),
   brsync = require("browser-sync").create(),
   // work with different files and include to one html, build to one html
   fileinclude = require("gulp-file-include"),
-  del = require("del");
+  del = require("del"),
+  scss = require("gulp-sass");
 
 function browserSync(params) {
   brsync.init({
@@ -46,22 +47,32 @@ function html() {
     .pipe(brsync.stream()); //обновим браузер вроде
 }
 
-
+//Function for work with css-files
+function css() {
+  return src(path.src.css)
+    .pipe(scss({
+      outputStyle: "expanded",//чтоб без сжатия пока формировался css
+    }))
+    .pipe(dest(path.build.css)) //путь к папке результата
+    .pipe(brsync.stream()); //обновим браузер вроде
+}
 
 // for live watching of html-partials
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
+  gulp.watch([path.watch.css], css);
 }
 // deteting 'dist' forder before build project, and create new 'dist' folder
 function clean(params) {
   return del(path.clean);
 }
-
-const build = gulp.series(clean, html);
+// gulp.parallel(css, html) - параллельное выполнение ф-й в скобках
+const build = gulp.series(clean, gulp.parallel(css, html));
 // сценарий выполнения
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;
+exports.css = css;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
