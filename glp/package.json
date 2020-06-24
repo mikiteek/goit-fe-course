@@ -1,0 +1,11 @@
+{
+  "name": "glp",
+  "version": "1.0.0",
+  "description": "gulp-package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergii Mykyteiek",
+  "license": "ISC"
+}

@@ -1,144 +1,50 @@
-const projectFolder = "dist";
-const sourseFolder = "src";
+'use strict';
 
+const { series, parallel, watch } = require('gulp');
+const requireDir = require('require-dir');
+const browserSync = require('browser-sync').create();
 
+const tasks = requireDir('./gulp/tasks', { recurse: true });
+const paths = require('./gulp/paths');
 
-const path = {
-  build: {
-    html: projectFolder + "/",
-    css: projectFolder + "/css/",
-    js: projectFolder + "/js/",
-    img: projectFolder + "/img/",
-  },
-  src: {
-    html: [sourseFolder + "/*.html", "!" + sourseFolder + "/_*.html"], // читаем html все, исключаем с нижним подчеркиванием для построения в результат
-    css: sourseFolder + "/scss/style.scss",
-    js: sourseFolder + "/js/script.js",
-    img: sourseFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-  },
-  watch: {
-    html: sourseFolder + "/**/*.html", // everything subdirs and watch all html-files
-    css: sourseFolder + "/scss/**/*.scss",
-    js: sourseFolder + "/js/**/*.js",
-    img: sourseFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-  },
-  clean: "./" + projectFolder + "/",
+const serve = () => {
+  return browserSync.init({
+    server: 'build',
+    notify: false,
+    open: false,
+    cors: true,
+    ui: false,
+    logPrefix: 'DevServer',
+    host: 'localhost',
+    port: process.env.PORT || 1234,
+  });
 };
 
-const { src, dest } = require("gulp"),
-  gulp = require("gulp"),
-  brsync = require("browser-sync").create(),// browser live
-  fileinclude = require("gulp-file-include"),// work with different files and include to one html, build to one html
-  del = require("del"), // deteting 'dist' forder before build project
-  scss = require("gulp-sass"),
-  autoprefixer = require("gulp-autoprefixer"),
-  groupMedia = require("gulp-group-css-media-queries"),
-  cleanCss = require("gulp-clean-css"), // compress css
-  rename = require("gulp-rename"), // rename extname to .min.css
-  uglify = require("gulp-uglify-es").default(),
-  imageMin = require("gulp-imagemin"), // shrink and optimization image
-  webp = require("gulp-webp"),
-  webphtml = require("gulp-webp-html"), // сгенерирует html для picture чтоб webp отображать в современных браузерах
-  webpcss = require("gulp-webpcss"), // для добавления свойств webp в css
-  svgSprite = require("gulp-svg-sprite")
-//поставить шрифты в видео с 01:07:10 мин
+const watcher = done => {
+  watch(paths.watch.html).on(
+    'change',
+    series(tasks.html, tasks.inject, browserSync.reload),
+  );
+  watch(paths.watch.css).on('change', series(tasks.css, browserSync.reload));
+  watch(paths.watch.js).on('change', series(tasks.scripts, browserSync.reload));
+  watch(paths.watch.images, tasks.images);
+  watch(paths.watch.fonts, tasks.fonts);
 
-function browserSync(params) {
-  brsync.init({
-    server: {
-      baseDir: "./" + projectFolder + "/",
-    },
-    port: 3000,
-    notify: false, //turn off plagin notify
-  });
-}
-//Function for work with html-files
-function html() {
-  return src(path.src.html)
-    .pipe(fileinclude())
-    .pipe(webphtml())
-    .pipe(dest(path.build.html)) //путь к папке результата
-    .pipe(brsync.stream()); //обновим браузер вроде
-}
+  done();
+};
 
-//Function for work with css-files
-function css() {
-  return src(path.src.css)
-    .pipe(scss({ outputStyle: "expanded"})) //чтоб без сжатия пока формировался css
-    .pipe(groupMedia())
-    .pipe(autoprefixer({
-      overrideBrowserslist: ["last 5 versions"],
-      cascade: true,
-    }))
-    .pipe(webpcss())
-    .pipe(dest(path.build.css)) // build нашего выходного файла css BEFORE сжатием .css, указываем путь куда выгружать
-    .pipe(cleanCss())
-    .pipe(rename({extname: ".min.css"}))
-    .pipe(dest(path.build.css)) // build нашего выходного файла css AFTER сжатия .min.css
-    .pipe(brsync.stream()); //обновим браузер
-}
+exports.start = series(
+  tasks.clean,
+  tasks.images,
+  parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
+  tasks.inject,
+  watcher,
+  serve,
+);
 
-//Function for work with js-files
-function js() {
-  return src(path.src.js)
-    .pipe(fileinclude())
-    .pipe(dest(path.build.js))
-    .pipe(uglify)
-    .pipe(rename({extname: ".min.js"}))
-    .pipe(dest(path.build.js))
-    .pipe(brsync.stream());
-}
-
-//Function for work with images
-function images() {
-  return src(path.src.img)
-    .pipe(webp({ quality: 70}))
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img)) // снова обращаемся к исходникам
-    .pipe(imageMin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      interlaced: true,
-      optimizationLevel: 3
-    }))
-    .pipe(dest(path.build.img))
-    .pipe(brsync.stream());
-}
-
-// task для спрайтов
-gulp.task("svgSprite", function () {
-  return gulp.src([sourseFolder + "/iconsprite/*.svg"]) // отсюда возбмет
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: "../icons/icons.svg", // sprite file name, сюда положит
-          example: true // будет создавать html с примерами иконок
-        }
-      },
-    }))
-    .pipe(dest(path.build.img))
-})
-
-// for live watching of html-partials
-function watchFiles(params) {
-  gulp.watch([path.watch.html], html);
-  gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], js);
-  gulp.watch([path.watch.img], images);
-}
-// deteting 'dist' forder before build project, and create new 'dist' folder
-function clean(params) {
-  return del(path.clean);
-}
-// gulp.parallel(css, html) - параллельное выполнение ф-й в скобках
-const build = gulp.series(clean, gulp.parallel(js, css, html, images));
-// сценарий выполнения
-const watch = gulp.parallel(build, watchFiles, browserSync);
-
-exports.images = images;
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch;
+exports.build = series(
+  tasks.clean,
+  tasks.images,
+  parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
+  tasks.inject,
+);
