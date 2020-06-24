@@ -1,6 +1,8 @@
 const projectFolder = "dist";
 const sourseFolder = "src";
 
+
+
 const path = {
   build: {
     html: projectFolder + "/",
@@ -37,7 +39,9 @@ const { src, dest } = require("gulp"),
   imageMin = require("gulp-imagemin"), // shrink and optimization image
   webp = require("gulp-webp"),
   webphtml = require("gulp-webp-html"), // сгенерирует html для picture чтоб webp отображать в современных браузерах
-  webpcss = require("gulp-webpcss") // для добавления свойств webp в css
+  webpcss = require("gulp-webpcss"), // для добавления свойств webp в css
+  svgSprite = require("gulp-svg-sprite")
+//поставить шрифты в видео с 01:07:10 мин
 
 function browserSync(params) {
   brsync.init({
@@ -100,6 +104,20 @@ function images() {
     .pipe(dest(path.build.img))
     .pipe(brsync.stream());
 }
+
+// task для спрайтов
+gulp.task("svgSprite", function () {
+  return gulp.src([sourseFolder + "/iconsprite/*.svg"]) // отсюда возбмет
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: "../icons/icons.svg", // sprite file name, сюда положит
+          example: true // будет создавать html с примерами иконок
+        }
+      },
+    }))
+    .pipe(dest(path.build.img))
+})
 
 // for live watching of html-partials
 function watchFiles(params) {
